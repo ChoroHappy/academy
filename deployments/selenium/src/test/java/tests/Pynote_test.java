@@ -18,7 +18,6 @@ public class Pynote_test {
     @Test
     public void setUp() {
         Driver.getDriver().get(Config.getProperty("academyURL"));
-
         login_page.loginButton.click();
         login_page.usernameInputBox.sendKeys(Config.getProperty("username"));
         login_page.passwordInputBox.sendKeys(Config.getProperty("password"));
