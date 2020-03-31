@@ -126,3 +126,11 @@ tabcontent, p{
   bottom:0;
   color: black;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: rgba(14, 10, 10, 0.8);
+}
+.grid-item {
+  text-align: center;
+}
