@@ -22,11 +22,11 @@ public class Signup {
         Thread.sleep(1000);
         signUp_page.lastNameInputBox.sendKeys(faker.name().lastName());
         Thread.sleep(1000);
-        signUp_page.usernameInputBox.sendKeys("username");
+        signUp_page.usernameInputBox.sendKeys(Config.getProperty("username"));
         Thread.sleep(1000);
         signUp_page.emailInputBox.sendKeys("username@gmail.com");
-        signUp_page.passwordInputBox.sendKeys("Admin12345671");
-        signUp_page.passwordRepeatInputBox.sendKeys("Admin12345671");
+        signUp_page.passwordInputBox.sendKeys(Config.getProperty("password"));
+        signUp_page.passwordRepeatInputBox.sendKeys(Config.getProperty("password"));
         signUp_page.signUpButton.click();
 
     }

@@ -18,8 +18,8 @@ public class Chating_test {
         Driver.getDriver().get(Config.getProperty("academyURL"));
 
         login_page.loginButton.click();
-        login_page.usernameInputBox.sendKeys("username");
-        login_page.passwordInputBox.sendKeys("Admin12345671");
+        login_page.usernameInputBox.sendKeys(Config.getProperty("username"));
+        login_page.passwordInputBox.sendKeys(Config.getProperty("password"));
         Thread.sleep(2000);
         login_page.loginButton2.click();
         Thread.sleep(2000);
