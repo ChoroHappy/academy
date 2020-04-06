@@ -10,6 +10,8 @@ import utilities.Driver;
 
 public class Pynote_test {
 
+
+
     Login_page login_page = new Login_page();
     PyNote_page pyNote_page = new PyNote_page();
     WebDriverWait webDriverWait;
@@ -49,6 +51,7 @@ public class Pynote_test {
             pyNote_page.python3Button.click();
             Thread.sleep(1000);
             pyNote_page.loginButton.click();
+
 
 
         }
