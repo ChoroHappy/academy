@@ -11,6 +11,6 @@ public class Home_page {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//span[@style='font-size:30px;cursor:pointer']")
+    @FindBy(xpath = "//div[@id='main']//span")
     public WebElement menuButton;
 }

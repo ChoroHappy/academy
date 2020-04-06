@@ -14,8 +14,8 @@ public class Login_test {
         Driver.getDriver().get(Config.getProperty("academyURL"));
 
         login_page.loginButton.click();
-        login_page.usernameInputBox.sendKeys("username");
-        login_page.passwordInputBox.sendKeys("Admin12345671");
+        login_page.usernameInputBox.sendKeys(Config.getProperty("username"));
+        login_page.passwordInputBox.sendKeys(Config.getProperty("password"));
         login_page.loginButton2.click();
     }
 }
