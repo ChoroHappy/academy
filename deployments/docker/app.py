@@ -238,8 +238,8 @@ class LoginForm(FlaskForm):
     recaptcha   = RecaptchaField()
 
 class RegisterForm(FlaskForm):
-    firstname   = StringField('First Name', validators=[InputRequired(), Length(min=4, max=15)])
-    lastname    = StringField('Last Name', validators=[InputRequired(), Length(min=4, max=15)])
+    firstname   = StringField('First Name', validators=[InputRequired(), Length(min=2, max=15)])
+    lastname    = StringField('Last Name', validators=[InputRequired(), Length(min=2, max=15)])
     email       = StringField('Your email', validators=[InputRequired(), Email(message='Invalid email'), Length(max=50)])
     username    = StringField('Enter your username', validators=[InputRequired(), Length(min=4, max=30)])
     password = PasswordField('Please enter password', validators=[
@@ -255,8 +255,8 @@ class QuestionForm(FlaskForm):
     phone       = StringField('phone', validators=[InputRequired(), Length(min=8, max=80)])
 
 class EditProfile(FlaskForm):
-    firstname   = StringField('First Name', validators=[InputRequired(), Length(min=4, max=50)])
-    lastname    = StringField('Last Name',  validators=[InputRequired(), Length(min=4, max=15)])
+    firstname   = StringField('First Name', validators=[InputRequired(), Length(min=2, max=50)])
+    lastname    = StringField('Last Name',  validators=[InputRequired(), Length(min=2, max=15)])
     username    = StringField('Username', validators=[InputRequired(), Length(min=8, max=80)])
     email       = StringField('Email', validators=[InputRequired(), Length(min=8, max=80)])
 
@@ -611,7 +611,7 @@ def settings(username):
                 return render_template('settings.html', user_data=user_data, fname=current_user.firstname, lname=current_user.lastname, form_profile=form_profile, form_password=form_password, form_pynote=form_pynote, message=message)
 
 
-    return render_template('settings.html', user_data=user_data, fname=user_data.firstname, lname=user_data.lastname, formProfile=form_profile, formPassword=form_password, formPynote=form_pynote, message=None)
+    return render_template('settings.html', user_data=user_data, fname=user_data.firstname, lname=user_data.lastname, form_profile=form_profile, form_password=form_password, form_pynote=form_pynote, message=None)
 
 
 

@@ -126,13 +126,13 @@ color: white;
         <div class="settings-form">
           <h1>Edit My profile</h1>
           <form  method="POST">
-            {{ wtf.form_field(formProfile.firstname, placeholder=user_data.firstname) }}
+            {{ wtf.form_field(form_profile.firstname, placeholder=user_data.firstname) }}
 
-            {{ wtf.form_field(formProfile.lastname, placeholder=user_data.lastname) }}
+            {{ wtf.form_field(form_profile.lastname, placeholder=user_data.lastname) }}
 
-            {{ wtf.form_field(formProfile.username, placeholder=user_data.username) }}
+            {{ wtf.form_field(form_profile.username, placeholder=user_data.username) }}
 
-            {{ wtf.form_field(formProfile.email, placeholder=user_data.email) }}
+            {{ wtf.form_field(form_profile.email, placeholder=user_data.email) }}
             <input type="hidden" name="settingsForm" value="EditProfileSubmit" >
             <input onclick="messagePopUp(this)" type="submit" name="EditProfileSubmit" value="Submit">
           </form>
@@ -141,8 +141,8 @@ color: white;
         <div class="settings-form">
           <h1>Delete My Pynote</h1>
           <form method="POST">
-            {{ wtf.form_field(formPynote.username, placeholder=user_data.username) }}
-            {{ wtf.form_field(formPynote.pynote_name, placeholder='PyNote Name') }}
+            {{ wtf.form_field(form_pynote.username, placeholder=user_data.username) }}
+            {{ wtf.form_field(form_pynote.pynote_name, placeholder='PyNote Name') }}
             <input type="hidden" name="settingsForm" value="DeletePyNote" >
 
             <a href="/pynote"><button class="delete" type="button" name="Create PyNote">Create PyNote</button></a>
@@ -153,9 +153,9 @@ color: white;
         <div class="settings-form">
           <h1>Change the Password</h1>
           <form method="POST">
-            {{ wtf.form_field(formPassword.current, placeholder='Current Password') }}
-            {{ wtf.form_field(formPassword.password, placeholder='New Password') }}
-            {{ wtf.form_field(formPassword.confirm, placeholder='Confirm Password') }}
+            {{ wtf.form_field(form_password.current, placeholder='Current Password') }}
+            {{ wtf.form_field(form_password.password, placeholder='New Password') }}
+            {{ wtf.form_field(form_password.confirm, placeholder='Confirm Password') }}
             <input type="hidden" name="settingsForm" value="ChangePassword" >
             <input onclick="messagePopUp(this)" type="submit" value="Submit">
 
